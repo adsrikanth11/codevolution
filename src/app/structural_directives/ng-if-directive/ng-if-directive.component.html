@@ -1,0 +1,27 @@
+<h2 style="text-align: center;">Structural Directives - *ngIf Directive</h2>
+
+<h3 *ngIf=true>1. *ngIf=true simple - *ngIf Directive</h3>
+<span>--------------------------------------------------------------------------------</span>
+
+<h3 *ngIf="isDisplay">2. *ngIf="isDisplay" - Property Binding *ngIf Directive</h3>
+<span>---------------------------------------------------------------------------------------------------------------------</span>
+
+<h3>3. *ngIf="isDisplay; else elseBlock" - Property Binding *ngIf else Block Directive</h3>
+<h3 *ngIf="isDisplay; else elseBlock">I am If Directive</h3>
+
+<ng-template #elseBlock>
+    <h3>#elseBlock - I am else block</h3>
+</ng-template>
+<span>-------------------------------------------------------------------------------------------------------------------------------------------------</span>
+
+<h3>4. *ngIf="isDisplay; then thenblock; else iamelseblock" - Another way of *ngIf else Block Directive</h3>
+<div *ngIf="isDisplay; then thenblock; else iamelseblock"></div>
+<ng-template #thenblock>
+    <h3>I am If/then Block</h3>
+</ng-template>
+
+<ng-template #iamelseblock>
+    <h3>I am else Block</h3>
+</ng-template>
+
+<button (click)="toggle_ifelse()">Toggle if_else blocks</button>

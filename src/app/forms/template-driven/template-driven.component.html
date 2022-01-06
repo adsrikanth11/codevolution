@@ -1,0 +1,51 @@
+<div class="container">
+    <h2 class="text-center mt-3">Template Driven Forms</h2>
+    <hr>
+    <div class="card w-50 shadow-sm border-0 mx-auto">
+        <div class="card-body">
+            <form #templateform="ngForm" (submit)="add(templateform)">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username: </label>
+                    <input type="text" name="username" [(ngModel)]="username" class="form-control" id="username" minlength="3" required>
+                </div>
+                <div class="mb-3">
+                    <label for="emailid" class="form-label">Email ID: </label>
+                    <input type="email" name="emailid" [(ngModel)]="emailid" class="form-control" id="emailid" minlength="3" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password: </label>
+                    <input type="password" name="password" [(ngModel)]="password" class="form-control" id="password" minlength="3" required>
+                </div>
+                <!-- <div class="mb-3">
+                    Gender : &nbsp;
+                    <div class="form-check form-check-inline">
+                        <input type="radio" ngModel name="gender" value="male" class="form-check-input" id="male" checked>
+                        <label for="male" class="form-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" ngModel name="gender" value="female" class="form-check-input" id="female">
+                        <label for="female" class="form-label">Female</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" ngModel name="cities" id="Hyderabad" value="Hyderabad" class="form-check-input">
+                        <label for="Hyderabad" class="form-label">Hyderabad</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" ngModel name="cities" id="Bangalore" value="Bangalore" class="form-check-input">
+                        <label for="Bangalore" class="form-label">Bangalore</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" ngModel name="cities" id="Chennai" value="Chennai" class="form-check-input">
+                        <label for="Chennai" class="form-label">Chennai</label>
+                    </div>
+                </div> -->
+                <button type="submit" class="btn btn-primary me-4" [disabled]="!templateform.valid">Submit</button>
+                <button type="button" class="btn btn-danger me-4" (click)="resetform(templateform)">Reset</button>
+                <button type="button" class="btn btn-success" (click)="setvalue(templateform)">Set Value</button>
+                <!-- <button type="button" class="btn btn-danger" (click)="resetform(templateform)">Reset</button> -->
+            </form>
+        </div>
+    </div>
+</div>

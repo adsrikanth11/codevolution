@@ -1,0 +1,30 @@
+<h2 class="text-center mt-3">Reactive Form - Form Control</h2>
+<hr>
+<div class="card mx-auto w-50 shadow">
+    <div class="card-header">
+        <h3 class="text-center">Form Group/Builder</h3> 
+    </div>
+    <div class="card-body">
+        <form [formGroup]="myforms" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username : </label>
+                <input type="text" name="username" id="username" formControlName='username' class="form-control">
+                <div class="text-danger" *ngIf="myforms.get('username').hasError('required') && myforms.get('username').touched">Username is required</div>
+                <div class="text-danger" *ngIf="myforms.get('username').hasError('minlength') && myforms.get('username').touched">Username should be minmum 3 letters</div>
+                
+            </div>
+            <div class="mb-3">
+                <label for="emailid" class="form-label">E-mail : </label>
+                <input type="email" name="emailid" id="emailid" formControlName='emailid' class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password : </label>
+                <input type="password" name="password" id="password" formControlName='password' class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary me-4" [disabled]="!myforms.valid">Submit</button>
+            <button type="button" (click)="resetvalue()" class="btn btn-danger me-4">Reset</button>
+            <button type="button" (click)="setvalue()" class="btn btn-success me-4">Set Values</button>
+            <button type="button" (click)="patchvalue()" class="btn btn-warning">Patch Values</button>
+        </form>
+    </div>
+</div>

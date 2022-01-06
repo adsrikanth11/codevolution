@@ -1,0 +1,9 @@
+<h2 style="text-align: center;">Structural Directives - [ngSwitch] Directive</h2>
+
+<input type="text" placeholder="Enter red, green, blue" [(ngModel)]=color>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'" class="danger">I am Red</div>
+    <div *ngSwitchCase="'green'" class="success">I am green</div>
+    <div *ngSwitchCase="'blue'" class="info">I am Blue</div>
+    <div *ngSwitchDefault>Not found</div>
+</div>

@@ -1,0 +1,13 @@
+.offcanvas-start {
+    top: 57px;
+    left: 0;
+    width: 300px;
+    /* border-right: none; */
+}
+.offcanvas-body {
+    padding: 0;
+}
+.accordion-button::after {
+    content: "";
+    background-image: none;
+}

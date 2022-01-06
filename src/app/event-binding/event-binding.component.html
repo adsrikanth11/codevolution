@@ -1,0 +1,9 @@
+<h2 style="text-align: center;">Event Binding</h2>
+<i class="material-icons bulb" style="font-size:50px" [class.on_off]="switch" (click)="bulb()">lightbulb_outline</i><br>
+<button (click)="On()">ON</button>
+<button (click)="Off()">OFF</button>&nbsp;&nbsp;
+<button (click)="clickEvent()">Click event binding</button>&nbsp;&nbsp;
+<button (click)="clearConsole()">Clear console logs</button>&nbsp;&nbsp;
+<button (click)="getEvent($event)">Get Event Properties</button>&nbsp;&nbsp;
+<button (click)="inlineevent='Welcome Srikanth'">Inline Event</button>
+{{inlineevent}}

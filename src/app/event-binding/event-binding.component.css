@@ -1,0 +1,7 @@
+.on_off {
+    color: red;
+}
+
+.bulb:hover {
+    cursor: pointer;
+}

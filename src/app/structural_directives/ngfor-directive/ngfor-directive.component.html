@@ -1,0 +1,11 @@
+<h2 style="text-align: center;">Structural Directives - *ngFor Directive</h2>
+
+<ul *ngFor="let color of colors; index as i; odd as o; even as e">
+    <li>{{i}}. {{color | uppercase}} - {{o}} - {{e}}</li> 
+</ul>
+<div style="text-align: center;">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+
+<h2 style="text-align: center;">Data Interchange from one component to another</h2>
+<b>{{myname}}</b> - From Parent component to Child component
+<br><br>
+<!-- <button (click)="fireEvent()">Send Event</button> -->

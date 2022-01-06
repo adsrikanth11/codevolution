@@ -1,0 +1,35 @@
+<h2 style="text-align: center;">Pipes</h2>
+
+<h3>--------------------------------------------------------------------------------------- String Pipes</h3>
+<h4>{{strmsg}}</h4>
+{{strmsg | lowercase}} - <b>lowercase</b> <br><br>
+{{strmsg | uppercase}} - <b>uppercase</b> <br><br>
+{{strmsg | titlecase}} - <b>titlecase</b> <br><br>
+{{strmsg | slice:11:15}} - <b>slice</b> <br><br>
+{{jsobj | json}} - <b>JSON</b> 
+
+<h3>--------------------------------------------------------------------------------------- Number Pipes</h3>
+{{mynumber | number:'1.2-3'}} - <b>number:'1.2-3'</b> <br><br>
+{{mynumber | number:'4.5-6'}} - <b>number:'3.4-5'</b> <br><br>
+{{mynumber | number:'3.1-2'}} - <b>number:'3.1-2'</b>
+
+<h3>--------------------------------------------------------------------------------------- Cuurency Pipes</h3>
+{{mycuurency | percent}} - <b>0.25 - percentage</b> <br><br>
+{{mycuurency | currency}} - <b>0.25 - Default currency</b> <br><br>
+{{mycuurency | currency: 'INR'}} - <b>0.25 - Indian currency</b> <br><br>
+{{mycuurency | currency: 'INR': 'code'}} - <b>0.25 - Indian Code</b> <br><br>
+{{250 | currency: 'INR': 'symbol-narrow':'4.2-2'}} - <b>250 - symbol-narrow</b>
+
+<h3>--------------------------------------------------------------------------------------- Date Pipes</h3>
+{{date}} - <b>Date without pipe</b> <br><br>
+{{date | date: 'short'}} - <b>Short</b> <br><br>
+{{date | date: 'shortDate'}} - <b>Short Date</b> <br><br>
+{{date | date: 'shortTime'}} - <b>Short Time</b> <br><br>
+{{date | date: 'medium'}} - <b>Medium</b> <br><br>
+{{date | date: 'mediumDate'}} - <b>Medium Date</b> <br><br>
+{{date | date: 'mediumTime'}} - <b>Medium Time</b> <br><br>
+{{date | date: 'long'}} - <b>Long</b> <br><br>
+{{date | date: 'longDate'}} - <b>Long Date</b> <br><br>
+{{date | date: 'longTime'}} - <b>Long Time</b> <br><br>
+
+
