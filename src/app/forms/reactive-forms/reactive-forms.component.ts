@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -7,9 +7,9 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./reactive-forms.component.css']
 })
 export class ReactiveFormsComponent implements OnInit, OnChanges {
-  myforms:any = FormGroup;
+  myforms:any = UntypedFormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: UntypedFormBuilder) { }
   ngOnChanges(changes: SimpleChanges): void {
     throw new Error('Method not implemented.');
   }
@@ -24,15 +24,15 @@ export class ReactiveFormsComponent implements OnInit, OnChanges {
 
   // FormBuilder
     this.myforms = this.fb.group({
-      'username': new FormControl('', [
+      'username': new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(3)
       ]),
-      'emailid': new FormControl('', [
+      'emailid': new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(3)
       ]),
-      'password': new FormControl('', [
+      'password': new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(6)
       ])
